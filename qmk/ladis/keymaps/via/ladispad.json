@@ -1,0 +1,59 @@
+{
+  "name": "Ladispad",
+  "vendorProductId": 4276969568,
+  "macros": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+  "layers": [
+    [
+      "KC_WWW_BACK",
+      "KC_UP",
+      "KC_WWW_FORWARD",
+      "KC_LEFT",
+      "KC_DOWN",
+      "KC_RGHT",
+      "MO(1)",
+      "KC_WWW_REFRESH",
+      "KC_F16",
+      "C(KC_LGUI)",
+      "KC_MUTE"
+    ],
+    [
+      "KC_F17",
+      "KC_F18",
+      "KC_F19",
+      "KC_F20",
+      "KC_F21",
+      "KC_F22",
+      "KC_NO",
+      "KC_F23",
+      "KC_F24",
+      "KC_SLEP",
+      "KC_MUTE"
+    ],
+    [
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS"
+    ],
+    [
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS"
+    ]
+  ]
+}
