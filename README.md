@@ -1,4 +1,6 @@
 # ⌨ Ladispad
+[![Visits Badge](https://badges.pufler.dev/visits/ajmandourah/Ladispad)](https://badges.pufler.dev) [![GitHub license](https://img.shields.io/github/license/ajmandourah/Ladispad)](https://github.com/ajmandourah/Ladispad/blob/main/LICENSE) [![GitHub forks](https://img.shields.io/github/forks/ajmandourah/Ladispad)](https://github.com/ajmandourah/Ladispad/network) ![GitHub all releases](https://img.shields.io/github/downloads/ajmandourah/Ladispad/total)
+
 Ladispad is a custom-made 11 key macropad with 2 rotary encoders designed for the **simplicity** and the **ease of assembly to non technical users**. 
 Macropad are not a new thing. Browsing the internet will lead to to dozens of open-source macropads that let you print your own PCB and assemble it at home, but most of these macropads uses matrixes which will force you to solder diodes adding a little complexity to the process.
 
