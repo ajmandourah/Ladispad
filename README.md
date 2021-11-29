@@ -22,3 +22,8 @@ Included even the SVG files for the acrylic cases I made for the pad. you can la
 - Pro Micro. (micro USB, mini USB, USB-C).
 - 9 cherry MX style switches.
 - 2 Rotary Encoders (EC11)
+- OLED display 128x32 (SSD1306)
+- The laser cut acrylic case.
+- 4 M3 screws.
+
+## 📷 Images:
