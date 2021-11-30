@@ -8,6 +8,8 @@ Ladispad uses a **direct pin** approach , that means you **don't need to solder 
 
 Ladispad uses a Pro Micro as its main controller. Its very affordable and have many varients with different USB ports and sizes. **I designed the PCB so it will be compatible which whatever you choose**.
 
+![Ladispad PCB showing promicro compatibility](/images/IMG-20211108-WA0001.jpg) 
+
 The macropad is QMK/Via and soon Vial compatible which will add to the ease of use in case you want to program your encoders on the fly without the need to flash the firmware everytime you do so.
 
 Included even the SVG files for the acrylic cases I made for the pad. you can laser cut it using any of the online service providers you choose.
