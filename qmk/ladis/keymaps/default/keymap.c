@@ -61,7 +61,7 @@ static void render_logo(void) {
 }
 
 
-void oled_task_user(void) {
+bool oled_task_user(void) {
   if (is_keyboard_master()) {
     // If you want to put your image on the master side, put your function call here:
     render_logo();
@@ -69,4 +69,6 @@ void oled_task_user(void) {
     // And if you want to put your image on the slave side, put it here instead:
     render_logo();
   }
+
+  return false;
 }
