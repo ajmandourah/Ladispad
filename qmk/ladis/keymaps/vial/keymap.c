@@ -7,48 +7,33 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 [_BL] = LAYOUT(
-		KC_WWW_BACK, KC_UP, KC_WWW_FORWARD, \
-		KC_LEFT, KC_DOWN, KC_RIGHT, \
-		MO(_FL), KC_WWW_REFRESH, KC_F16, \
-		LCTL(KC_LGUI), KC_MUTE),
-
-[_FL] = LAYOUT(
-		KC_F17, KC_F18, KC_F19, \
-		KC_F20, KC_F21, KC_F22, \
-		KC_NO, KC_F23, KC_F24, \
-		KC_SYSTEM_SLEEP, KC_MUTE),
+		KC_F13, 	KC_F14, 	KC_F15,
+		KC_F16, 	KC_F17, 	KC_F18, 
+		KC_LCTL, 	KC_F19, 	KC_F20,
+		KC_HOME,	KC_MUTE
+		),
+[2] = LAYOUT(
+		KC_TRNS, 	KC_TRNS, 	KC_TRNS,
+		KC_TRNS, 	KC_TRNS, 	KC_TRNS,
+		KC_TRNS, 	KC_TRNS, 	KC_TRNS,
+		KC_TRNS, 	KC_TRNS 
+		),
 
 };
 
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    if (index == 0) { /* First encoder */
-        if (clockwise & layer_state_is(_BL)) {
-            tap_code(KC_RIGHT);
-        } else if (clockwise & layer_state_is(_FL)){
-			tap_code(KC_MS_WH_DOWN);
-        } 
-		else if (!clockwise & layer_state_is(_BL)){
-            tap_code(KC_LEFT);
-        }
-		 else if (!clockwise & layer_state_is(_FL)) {
-            tap_code(KC_MS_WH_UP);
-		}
-    } else if (index == 1) { /* Second encoder */
-        if (clockwise & layer_state_is(_BL)) {
-            tap_code(KC_AUDIO_VOL_UP);
-        } else if (clockwise & layer_state_is(_FL)){
-			tap_code(KC_MS_WH_RIGHT);
-        } 
-		
-		else if (!clockwise & layer_state_is(_BL)){
-            tap_code(KC_AUDIO_VOL_DOWN);
-        }
-		else if (!clockwise & layer_state_is(_FL)) {
-            tap_code(KC_MS_WH_LEFT);
-		}
-    }
-    return false;
-}
+#if defined(ENCODER_MAP_ENABLE)
+const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
+    [_BL] =   {
+		ENCODER_CCW_CW(KC_MS_WH_DOWN,KC_MS_WH_UP), 
+		ENCODER_CCW_CW(KC_VOLD,KC_VOLU)  
+		},
+	[2] =   {
+		ENCODER_CCW_CW(KC_TRNS, KC_TRNS), 
+		ENCODER_CCW_CW(KC_TRNS, KC_TRNS)  
+		},
+};
+#endif
+
 
 static void render_logo(void) {
     static const char PROGMEM raw_logo[] = {
@@ -61,12 +46,8 @@ static void render_logo(void) {
 }
 
 
-void oled_task_user(void) {
-  if (is_keyboard_master()) {
-    // If you want to put your image on the master side, put your function call here:
+bool oled_task_user(void) {
     render_logo();
-  } else {
-    // And if you want to put your image on the slave side, put it here instead:
-    render_logo();
-  }
+  return false;
 }
+
