@@ -1,0 +1,10 @@
+{
+    "keyboard_name": "LadisPad",
+    "manufacturer": "Ladis",
+    "usb": {
+        "pid": "0x6060",
+        "vid": "0xFEED",
+        "device_version": "0.0.1"
+    },
+    "bootloader": "atmel-dfu"
+}
